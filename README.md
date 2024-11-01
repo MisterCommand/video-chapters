@@ -1,38 +1,30 @@
-# sv
+# Video Player with Chapters
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+- Test chapter timestamps
+- One-click fast-forward
+- All data doesn't leave your browser!
 
-## Creating a project
+![image](https://github.com/user-attachments/assets/2f24e448-4ba3-4a4a-9ba7-b3b26d171a57)
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+## Storing chapters
+Define chapters using JSON
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+[
+  {
+    "time": starting time in second,
+    "name": string (optional)
+  }
+]
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
+Example
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+[
+  {
+    "time": 0,
+    "name": "Start"
+  },
+  {
+    "time": 10
+  }
+]
+```
