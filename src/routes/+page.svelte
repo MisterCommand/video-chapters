@@ -54,7 +54,8 @@
 
 <section class="grid grid-cols-3 gap-2 h-screen">
 
-    <div class="col-span-2">
+    <div class="col-span-2 pt-4">
+        {#if !videoSrc}
         <div 
         class="border-2 border-dashed border-gray-400 text-gray-200 p-6 text-center mb-4 cursor-pointer" 
         on:drop={handleDrop} 
@@ -72,6 +73,7 @@
         class="hidden" 
         on:change={handleFileSelect}
         />
+        {/if}
 
         {#if videoSrc}
         <video controls class="w-full mx-auto mb-4" bind:this={videoElement}>
@@ -81,7 +83,7 @@
         {/if}
     </div>
 
-    <div class="flex flex-col gap-2 border-l-4 p-2 border-gray-600">
+    <div class="flex flex-col gap-2 border-l-4 p-2 border-gray-600 pt-4">
         <textarea 
             class="w-full p-2 border-2 border-gray-400 mb-2 bg-transparent text-gray-200" 
             bind:value={jsonInput} 
