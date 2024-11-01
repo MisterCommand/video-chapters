@@ -52,7 +52,7 @@
   }
 </script>
 
-<section class="grid grid-cols-3 gap-2 h-screen">
+<section class="flex flex-col md:grid grid-cols-3 gap-2 h-screen">
 
     <div class="col-span-2 pt-4">
         {#if !videoSrc}
